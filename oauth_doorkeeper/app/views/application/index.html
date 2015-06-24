@@ -1,0 +1,6 @@
+<% unless @user.nil? %>
+  <h1>Hi! <%= @user.email %></h1>
+  <%= link_to "Logout", destroy_user_session_path, class: 'button' %>
+<% else %>
+  <%= link_to "Login", new_user_session_path, class: 'button' %>
+<% end %>
